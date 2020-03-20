@@ -54,7 +54,7 @@ namespace Labsheet5
             if(band != null)
             {
                 var query = from A in db.Albums
-                            where A.BandId.Equals(band)
+                            where A.Name.Equals(band)
                             select A.Name;
                 LBXAlbum.ItemsSource = query.ToList();
             }
