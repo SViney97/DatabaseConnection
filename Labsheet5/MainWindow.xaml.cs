@@ -28,9 +28,11 @@ namespace Labsheet5
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var query = from a in db.Bands
-                        orderby a.Name
-                        select a.Name;
+            var query = from b in db.Bands
+                        orderby b.Name
+                        select b;
+
+            var results = query.ToList();
 
             LBXBands.ItemsSource = query.ToList();
 
@@ -49,13 +51,18 @@ namespace Labsheet5
 
         private void LBXBands_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string band = LBXBands.SelectedItem as string;
+            var BandID = LBXBands.SelectedValue;
 
-            if(band != null)
+            int bandID = Convert.ToInt32(BandID);
+
+            if(BandID != null)
             {
                 var query = from A in db.Albums
-                            where A.Name.Equals(band)
+                            where A.BandId == bandID
                             select A.Name;
+
+                var results = query.ToList();
+
                 LBXAlbum.ItemsSource = query.ToList();
             }
           
