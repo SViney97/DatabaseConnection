@@ -11,7 +11,7 @@
   
     
     <Grid>
-        <ListBox x:Name="LBXBands" HorizontalAlignment="Left" Height="93" Margin="10,57,0,0" VerticalAlignment="Top" Width="304" SelectionChanged="LBXBands_SelectionChanged"/>
+        <ListBox x:Name="LBXBands" HorizontalAlignment="Left" Height="93" Margin="10,57,0,0" VerticalAlignment="Top" Width="304" SelectionChanged="LBXBands_SelectionChanged" SelectedValuePath="Id" DisplayMemberPath="Name"/>
         <ListBox x:Name="LBXAlbum" HorizontalAlignment="Left" Height="93" Margin="370,57,0,0" VerticalAlignment="Top" Width="304" SelectionChanged="LBXBands_SelectionChanged"/>
         <DataGrid x:Name="DGBands" HorizontalAlignment="Left" Height="100" Margin="10,187,0,0" VerticalAlignment="Top" Width="304"/>
         <DataGrid x:Name="DGAlbum" HorizontalAlignment="Left" Height="100" Margin="370,187,0,0" VerticalAlignment="Top" Width="304"/>
