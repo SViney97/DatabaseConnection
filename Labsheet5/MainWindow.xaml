@@ -1,0 +1,19 @@
+﻿<Window x:Class="Labsheet5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Labsheet5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" 
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}">
+  
+    
+    <Grid>
+        <ListBox x:Name="LBXBands" HorizontalAlignment="Left" Height="93" Margin="10,57,0,0" VerticalAlignment="Top" Width="304" SelectionChanged="LBXBands_SelectionChanged"/>
+        <ListBox x:Name="LBXAlbum" HorizontalAlignment="Left" Height="93" Margin="370,57,0,0" VerticalAlignment="Top" Width="304" SelectionChanged="LBXBands_SelectionChanged"/>
+        <DataGrid x:Name="DGBands" HorizontalAlignment="Left" Height="100" Margin="10,187,0,0" VerticalAlignment="Top" Width="304"/>
+        <DataGrid x:Name="DGAlbum" HorizontalAlignment="Left" Height="100" Margin="370,187,0,0" VerticalAlignment="Top" Width="304"/>
+    </Grid>
+</Window>
